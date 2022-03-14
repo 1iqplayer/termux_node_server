@@ -1,0 +1,1 @@
+exports.print = "This is text from module :)";
