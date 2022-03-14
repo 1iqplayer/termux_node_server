@@ -1,9 +1,9 @@
 var http = require('http');
-var module = require('./my_module');
+var url = require('url');
 
 http.createServer(function(req, res){
     res.writeHead(200, {'Content-Type': 'text/html'});
-    res.write(req.url);
-    res.write(module.print);
-    res.end();
+    let q = url.parse(req.url, true).query;
+    var txt = q.imie + ' ' + q.ksywa;
+    res.end(txt);
 }).listen(8080);

@@ -1,0 +1,22 @@
+body{
+    background-color: black;
+}
+h1{
+    color: aqua;
+    text-align: center;
+}
+.container{
+    position: relative;
+    height: 30px;
+}
+.srodek{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.przewijak{
+    color: darkturquoise;
+    box-shadow: 2px 2px 12px 1px rgba(140, 140, 140, .5);
+}
