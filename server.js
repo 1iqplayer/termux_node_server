@@ -17,7 +17,7 @@ http.createServer(function (req, res) {
     if (q.pathname == '/check'){
         let ts = new Date();
         let when = (timecheckCount++).toString() + ". checked at: " +ts.getHours().toString() + ":" + ts.getMinutes().toString() +":" +ts.getSeconds().toString();
-        let readings = "  Pressure: " + quer.pressure + "  Temp: " + quer.temp;
+        let readings = "   t: " + quer.temp + " h: " + quer.humidity + " p: " + quer.pressure;
         
         fs.appendFile('readings/timestamps.txt', when + readings + '\n', function (err) {
             if (err) {throw err}else{
